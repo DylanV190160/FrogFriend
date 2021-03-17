@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrogFriend.FrogPage"
+             BackgroundImageSource="bg_Purple">
+
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="AUTO"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Header Nav Section 1 -->
+        <BoxView BackgroundColor="Transparent" Grid.Row="0" HeightRequest="50"/>
+        <StackLayout Grid.Row="0" Orientation="Vertical">
+            <ImageButton 
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                     Source="icon_settings_1.png"
+                     WidthRequest="36"
+                     HeightRequest="36"
+                     Padding="8"
+                     CornerRadius="100"
+                     BackgroundColor="Transparent">
+            </ImageButton>
+        </StackLayout>
+
+        <!-- Pet Image Section 2 -->
+        <BoxView BackgroundColor="Transparent" Grid.Row="1" HeightRequest="200"/>
+        <StackLayout Grid.Row="1">
+            <Button x:Name="frogNameButton"
+                    Text="Froggo" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    FontAttributes="Bold" 
+                    FontSize="Medium" 
+                    BackgroundColor="Transparent"
+                    >
+            </Button>
+            
+            <Image x:Name="frogImage" 
+                   Source="frog.png" 
+                   Grid.Row="1" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="End" 
+                   HeightRequest="200" 
+                   WidthRequest="200">
+                
+            </Image>
+        </StackLayout>
+        
+
+        <!-- Progress Bar & Info Section 3 -->
+        <BoxView BackgroundColor="Transparent" Grid.Row="2" HeightRequest="100"/>
+        <ProgressBar Grid.Row="2" 
+                     Progress=".70" 
+                     ProgressColor="Gold" 
+                     WidthRequest="200" 
+                     HorizontalOptions="Center" 
+                     VerticalOptions="Center">
+        </ProgressBar>
+        <Label x:Name="levelLabel" 
+               Text="Level 0" 
+               Grid.Row="2" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" 
+               Margin="0, 0, 0, 50">
+            
+        </Label>
+        <Label x:Name="xpLabel"
+               Text="700 XP" 
+               Grid.Row="2" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" 
+               Margin="0, 50, 0, 0">
+            
+        </Label>
+        
+        <!-- Pet Stats Section 4 -->
+        <BoxView BackgroundColor="Transparent" Grid.Row="3"/>
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Orientation="Horizontal" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center">
+                <Image Source="icon_heart_1.png" WidthRequest="30" HeightRequest="30" />
+                <ProgressBar WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center" Progress=".65" 
+                     ProgressColor="Gold"></ProgressBar>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Orientation="Horizontal" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center">
+                <Image Source="icon_power_1.png" WidthRequest="30" HeightRequest="30" />
+                <ProgressBar WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center" Progress=".50" 
+                     ProgressColor="Gold"></ProgressBar>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Orientation="Horizontal" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center">
+                <Image Source="icon_happy_1.png" WidthRequest="30" HeightRequest="30" />
+                <ProgressBar WidthRequest="150" HorizontalOptions="Center" VerticalOptions="Center" Progress=".80" 
+                     ProgressColor="Gold"></ProgressBar>
+            </StackLayout>
+
+        </Grid>
+        
+
+        <!-- Navigation Buttons Section 5 -->
+        <BoxView BackgroundColor="Transparent" Grid.Row="4" HeightRequest="100"/>
+
+        <StackLayout Orientation="Horizontal" Grid.Row="4">
+            
+            <ImageButton x:Name="feedButton"
+                         Clicked="feedFrogTapped"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                     Source="icon_eat_white.png"
+                     WidthRequest="60"
+                     HeightRequest="60"
+                     Padding="8"
+                     CornerRadius="100"
+                     BackgroundColor="MediumPurple">
+            </ImageButton>
+            <ImageButton 
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                     Source="icon_wash_white.png"
+                     WidthRequest="60"
+                     HeightRequest="60"
+                     Padding="8"
+                     CornerRadius="100"
+                     BackgroundColor="MediumPurple">
+            </ImageButton>
+
+            <ImageButton 
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                     Source="icon_play_white.png"
+                     WidthRequest="60"
+                     HeightRequest="60"
+                     Padding="8"
+                     CornerRadius="100"
+                     BackgroundColor="MediumPurple">
+            </ImageButton>
+
+            <ImageButton 
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                     Source="icon_gym_white.png"
+                     WidthRequest="60"
+                     HeightRequest="60"
+                     Padding="8"
+                     CornerRadius="100"
+                     BackgroundColor="MediumPurple">
+            </ImageButton>
+
+            <ImageButton 
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                     Source="icon_medicine_white.png"
+                     WidthRequest="60"
+                     HeightRequest="60"
+                     Padding="8"
+                     CornerRadius="100"
+                     BackgroundColor="MediumPurple">
+            </ImageButton>
+
+        </StackLayout>
+
+    </Grid>
+    
+</ContentPage>

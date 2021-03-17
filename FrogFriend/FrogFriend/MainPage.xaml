@@ -1,11 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FrogFriend.MainPage">
+             x:Class="FrogFriend.MainPage"
+             BackgroundImageSource="bg_Purple.png"
+             >
 
-    <StackLayout>
-        
+    <StackLayout VerticalOptions="CenterAndExpand">
+
+        <Label Text="FrogFriend"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="#FBF438"
+                    FontSize="36"
+                    FontAttributes="None"
+                    BackgroundColor="Transparent"
+                    Padding="30">
+        </Label>
+        <Image Source="frog.png"
+               VerticalOptions="CenterAndExpand"
+               HeightRequest="200"
+               WidthRequest="200">
+        </Image>
+        <Button Text="Play"
+                Clicked="PlayTapped">
+
+        </Button>
     </StackLayout>
-    
-
 </ContentPage>

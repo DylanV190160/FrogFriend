@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrogFriend.RenameFrog">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start" Spacing="50" Margin="30, 84, 30, 0">
+            <Label Text="Name your Frog"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="Center"
+                TextColor="#333333"
+                FontAttributes="Bold"
+                FontSize="30" />
+
+            <Entry Text="" Placeholder="My Frog Name" />
+
+            <Button Text="Save"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="#5A854D"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    Clicked="SaveFrogClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

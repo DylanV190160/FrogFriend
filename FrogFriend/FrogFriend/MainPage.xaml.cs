@@ -14,5 +14,10 @@ namespace FrogFriend
         {
             InitializeComponent();
         }
+
+        async void PlayTapped(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new FrogPage());
+        }
     }
 }
